@@ -24,7 +24,7 @@ INSTALLED_APPS = (
 
 Add `tracking_pixel` to your site urls:
 
-```
+```python
 urlpatterns = patterns('',
     ...,
     (r'^pixel/', include('pixel_tracker.urls')),
