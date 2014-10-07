@@ -1,12 +1,10 @@
 Django Pixel Tracker
 ==============
 
-Django tracking pixel for content analytics.
+Django Pixel Tracker uses Django signals to publish usage data about single object views. You can use this data for internal and external use, such as:
 
-Django Pixel Tracker uses Django signals to publish data about single object views. You can use this data for internal and external use, such as:
-
-* In-house analytics tracking
-* "Most active" stories/blogposts/etc
+* In-house analytics tracking (Maybe add a dashboard or track content in the Django admin?)
+* "Most active" stories/blogposts/etc (This is the SR's use case).
 
 
 Installation
