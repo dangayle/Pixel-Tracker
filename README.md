@@ -5,8 +5,8 @@ Django tracking pixel for content analytics.
 
 Django Pixel Tracker uses Django signals to publish data about single object views. You can use this data for internal and external use, such as:
 
-In-house analytics tracking
-"Most active" stories/blogposts/etc
+* In-house analytics tracking
+* "Most active" stories/blogposts/etc
 
 
 Installation
@@ -14,19 +14,23 @@ Installation
 
 Add `pixel_tracker` to your installed apps:
 
-    INSTALLED_APPS = (
-        ...,
-        'pixel_tracker',
-        ...
-    )
+```python
+INSTALLED_APPS = (
+    ...,
+    'pixel_tracker',
+    ...
+)
+```
 
 Add `tracking_pixel` to your site urls:
 
-    urlpatterns = patterns('',
-        ...,
-        (r'^pixel/', include('pixel_tracker.urls')),
-        ...,
-    )
+```
+urlpatterns = patterns('',
+    ...,
+    (r'^pixel/', include('pixel_tracker.urls')),
+    ...,
+)
+```
 
 Add pixel to your templates:
 
@@ -48,7 +52,7 @@ Usage
 
 To use Django Pixel Tracker, you need create a receiver to subscribe to the `pixel_data` signal within your app. Example:
 
-```
+```python
 from pixel_tracker.models import pixel_data
 
 def simple_receiver(**kwargs):
