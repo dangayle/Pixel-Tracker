@@ -70,3 +70,10 @@ The default data that it collects is:
 * Timestamp
 
 You could extend that with any data that is available in the context.
+
+
+TODO
+----
+
+* Make available on [PyPI](https://pypi.python.org)
+* Tests
