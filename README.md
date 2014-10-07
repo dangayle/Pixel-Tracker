@@ -56,6 +56,7 @@ To use Django Pixel Tracker, you need create a receiver to subscribe to the `pix
 from pixel_tracker.models import pixel_data
 
 def simple_receiver(**kwargs):
+    pixel_data = kwargs['pixel_data']
     pprint(pixel_data)
 
 pixel_data.connect(simple_receiver)
