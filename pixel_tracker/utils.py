@@ -3,7 +3,7 @@ from django.core import signing
 from django.core.signing import BadSignature, SignatureExpired
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.dateparse import parse_datetime
-from .models import pixel_data
+from .signals import pixel_data
 import logging
 
 logger = logging.getLogger(__name__)
