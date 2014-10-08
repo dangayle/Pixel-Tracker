@@ -34,7 +34,19 @@ def dont_track(request):
 
 
 def decode_pixel(tracking_pixel):
-    """Decode tracking pixel data and publish as Django signal."""
+    """Decode tracking pixel data and publish as Django signal.
+
+    The tracking pixel data is encoded in the pixel template tag
+    (.templatetags.pixel.pixel) using Django's signing functionality.
+
+    tracking_pixel is verified and the timestamp checked, so no unauthorized
+    or expired data will be processed.
+
+    Tracking pixel data is broadcast to the pixel_data signal (signals.py),
+    which can be subscribed to by any other apps within the site. Current
+    example of signal processing can be found in models.py.
+
+    """
 
     pixel = None
     try:

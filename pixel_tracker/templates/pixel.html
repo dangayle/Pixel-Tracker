@@ -1,3 +1,4 @@
 {% if pixel_url %}
+{# See http://www.robertbrewitz.com/2013/05/what-I-found-out-about-the-tracking-pixel-in-digital-advertising/ #}
 <script>(new Image()).src = "/pixel/{{pixel_url}}.png"</script>
 {% endif %}
