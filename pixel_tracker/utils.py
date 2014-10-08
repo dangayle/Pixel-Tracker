@@ -5,10 +5,8 @@ from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.dateparse import parse_datetime
 from .signals import pixel_data
 import logging
-
 logger = logging.getLogger(__name__)
-ch = logging.StreamHandler()
-logger.addHandler(ch)
+
 
 
 class PixelJSONSerializer(object):
